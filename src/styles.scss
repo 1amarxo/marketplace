@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background: url('https://sun9-54.userapi.com/impf/BSjQA34Z_UpC3rse0LH45ammh-fQJYQxBKnqaA/pOT2rSA0jyE.jpg?size=2560x1440&quality=95&sign=92434fa290f7e9fbe0f1eb406563e5f8&type=album') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
