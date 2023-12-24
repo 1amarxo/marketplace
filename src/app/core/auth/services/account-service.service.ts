@@ -12,7 +12,9 @@ export class AccountServiceService {
   constructor(private _httpClient : HttpClient) { }
 
   login(user: AccountCredential){
-    return this._httpClient.post<AuthResponse>(this.apiUrl+'/login',user) 
+    return this._httpClient.post<AuthResponse>(this.apiUrl+'/login',user).subscribe((data) => {
+      console.log(data)
+    })
   }
 
   regisration (user: AccountCredential) { 

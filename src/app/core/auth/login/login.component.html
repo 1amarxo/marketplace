@@ -1,13 +1,13 @@
 <div class="mainovskiy">
   <div class="login">
-    <form class="forma">
+    <form [formGroup]="loginForm" class="forma" (submit)="onSubmit()">
       <h1>Zavr</h1>
-      <div class="input-box">
-        <input type="text" formControlName="name" placeholder="Name">
-      </div>
       <!-- <div class="input-box">
-        <input type="email" formControlName="email" placeholder="Text email" required>
+        <input type="text" formControlName="name" placeholder="Name">
       </div> -->
+      <div class="input-box">
+        <input type="email" formControlName="email" placeholder="Email" required>
+      </div>
       <div class="input-box">
         <input type="text" formControlName="password" placeholder="Password">
       </div>
