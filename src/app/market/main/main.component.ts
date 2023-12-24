@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AccountFacadeService } from 'src/app/core/auth/services/account-facade.service';
 
 @Component({
   selector: 'app-main',
@@ -9,5 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+  
+  userName  = localStorage.getItem("user_name")
 
 }

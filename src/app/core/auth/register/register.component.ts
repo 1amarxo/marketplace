@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AccountServiceService } from '../services/account-service.service';
 import { AccountCredential } from '../model/account.credential';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AccountFacadeService } from '../services/account-facade.service';
 @Component({
   selector: 'app-register',
   standalone: true,
@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   loginForm : FormGroup
 
-  constructor(private _accountService: AccountServiceService, private router: Router){
+  constructor(private accountFacade: AccountFacadeService, private router: Router){
     this.loginForm = new FormGroup({
       name: new FormControl(null, [Validators.required]),
       password: new FormControl(null , [Validators.required]),
@@ -25,7 +25,7 @@ export class RegisterComponent {
   }
 
   onSubmit(){
-    this._accountService.regisration(this.loginForm.value as AccountCredential)
+    this.accountFacade.regisration(this.loginForm.value as AccountCredential)
     this.router.navigate(["/main"])
   }
 
