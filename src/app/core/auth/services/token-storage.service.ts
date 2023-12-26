@@ -15,15 +15,16 @@ export class TokenStorageService {
   }
   public removeToken(){
     localStorage.removeItem('token')
+    localStorage.removeItem('userName')
   }
 
 
 
   public get userName() : string{
-    return localStorage.getItem('user_name') as string
+    return localStorage.getItem('userName') as string
   }
   public set userName(user_name : string){
-    localStorage.setItem('user_name', user_name)
+    localStorage.setItem('userName', user_name)
   }
 
 

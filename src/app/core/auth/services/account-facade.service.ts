@@ -10,10 +10,11 @@ export class AccountFacadeService {
 
   constructor(private _accountService: AccountApiService, private tokenStorage: TokenStorageService) { }
 
-
+  userName : string = '';
 
   isAuthenticated(): Boolean {
     if(this.tokenStorage.accessToken ) {
+      this.userName = this.tokenStorage.userName ;
       return true;
     }
     else{
@@ -28,8 +29,8 @@ export class AccountFacadeService {
   }
 
    async login(user: AccountCredential) {
-     let token = await this._accountService.login(user) ;
-
+      let token = await this._accountService.login(user) ;
+      console.log(token)
       this.tokenStorage.accessToken = token.authToken;
       this.tokenStorage.userName = token.user.name;
    }

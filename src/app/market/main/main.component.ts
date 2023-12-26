@@ -11,6 +11,6 @@ import { AccountFacadeService } from 'src/app/core/auth/services/account-facade.
 })
 export class MainComponent {
   
-  userName  = localStorage.getItem("user_name")
+  userName  = localStorage.getItem("userName")
 
 }
