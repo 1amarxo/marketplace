@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class TokenInterceptorService {
 
-  rasul = inject(TokenStorageService)
+  
 
   constructor(private token_storage : TokenStorageService) { }
 

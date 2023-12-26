@@ -13,7 +13,7 @@ export class AccountApiService {
   constructor(private _httpClient : HttpClient) { }
 
   login(user: AccountCredential){
-    return this._httpClient.post<AuthResponse>(this.apiUrl + '/login', user).toPromise() as Promise<AuthResponse>
+    return this._httpClient.post<AuthResponse>(this.apiUrl+'/login',user) 
   }
 
   regisration (user: AccountCredential) { 
