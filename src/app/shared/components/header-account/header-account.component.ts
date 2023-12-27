@@ -9,14 +9,12 @@ import { AccountFacadeService } from 'src/app/core/auth/services/account-facade.
   templateUrl: './header-account.component.html',
   styleUrls: ['./header-account.component.scss']
 })
-export class HeaderAccountComponent implements OnInit{
+export class HeaderAccountComponent {
   public username: any
   constructor(public accountFacade : AccountFacadeService){
 
   }
-  ngOnInit(): void {
-    this.username = localStorage.getItem("userName")
-  }
+  
   logout(){   
     this.accountFacade.logout()
   }
