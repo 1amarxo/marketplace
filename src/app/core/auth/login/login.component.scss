@@ -15,6 +15,13 @@ label {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.mainovskiy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 94px;
+}
+
 .login {
   border-radius: 10px;
   width: 430px;
@@ -24,6 +31,8 @@ label {
   background-color: transparent;
   color: white;
   padding: 30px 40px;
+  
+
 }
 
 h1 {
